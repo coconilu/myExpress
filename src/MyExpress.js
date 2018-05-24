@@ -2,11 +2,18 @@ const http = require('http')
 
 class MyExpress {
     constructor(router) {
-        this.router = router || {}
+        this.router =  {}
         this.middlewares = []
     }
 
-    use(middleware) {
+    use() {
+        const args = [].slice.apply(arguments)
+        if (args[0] instanceof String) {
+
+        } else if (args[o] instanceof Function) {
+            
+        }
+        
         this.middlewares.push(middleware)
     }
 
